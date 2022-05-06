@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('includes/head', { title: 'Survivor' }) %>
+  </head>
+  <body>
+    <header>
+      <h1>Rogue Survivor</h1>
+      <ul>
+        <li class="header-link">
+          <a class="header-link href-a" href="main">Start again</a>
+        </li>
+        <li class="header-link">
+          <a class="header-link href-a" href="">Character</a>
+        </li>
+      </ul>
+    </header>
+    <div id="grid">
+      <div class="rogue">
+        <h4 id="rogue-shielding">Shild: 270</h4>
+  <h4 id="rogue-health" style="background-color: rgba(212, 16, 16, 0.5);">Health: 270</h4>
+  <h4 id="rogue-ap" style="background-color: rgba(240, 240, 240, 0.5);">AP: 12</h4>
+  <button class="btn">weaponsMaster</button>
+  <button class="btn">melee</button>
+  <button class="btn">marksman</button>
+  <button class="btn">athletics</button>
+  <button class="btn">defense</button>
+      </div>
+      <div class="attacker">
+        <h4>Shild: 270</h4>
+            <h4 style="background-color: rgba(212, 16, 16, 0.5);">Health: 270</h4>
+            <h4 style="background-color: rgba(240, 240, 240, 0.5);">AP: 12</h4>
+      </div>
+    </div>
+    <script src="rogue.js"></script>
+  </body>
+</html>
