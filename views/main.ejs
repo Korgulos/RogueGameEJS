@@ -10,7 +10,7 @@
     <h1>Rogue Survivor</h1>
     <ul>
       <li class="header-link">
-        <a class="header-link href-a" href="main">Start again</a>
+        <a class="header-link href-a" href="/start">Start again</a>
       </li>
       <li class="header-link">
         <a class="header-link href-a" href="">Character</a>
@@ -19,11 +19,11 @@
   </header>
   <div id="grid">
     <div class="rogue">
-      <h4 id="rogue-shielding">Shild: <%= roguecaracter.rogueShielding() %>
+      <h4 id="rogue-shielding">Shild: <%= setAttribute.sh %>
       </h4>
-      <h4 id="rogue-health" style="background-color: rgba(212, 16, 16, 0.5);">Health: <%= roguecaracter.rogueHealth() %>
+      <h4 id="rogue-health" style="background-color: rgba(212, 16, 16, 0.5);">Health: <%= setAttribute.hp %>
       </h4>
-      <h4 id="rogue-ap" style="background-color: rgba(240, 240, 240, 0.5);">AP: <%= roguecaracter.rogueAp() %>
+      <h4 id="rogue-ap" style="background-color: rgba(240, 240, 240, 0.5);">AP: <%= setAttribute.ap %>
       </h4>
       <a href="/melee"><button class="btn">Melee</button></a>
       <a href="/marksman"><button class="btn">Marksman</button></a>
@@ -32,9 +32,9 @@
       <a href="/weaponsMaster"><button class="btn">Weapons Master</button></a>
     </div>
     <div class="attacker">
-      <h4>Shild: 270</h4>
-      <h4 style="background-color: rgba(212, 16, 16, 0.5);">Health: 270</h4>
-      <h4 style="background-color: rgba(240, 240, 240, 0.5);">AP: 12</h4>
+      <h4>Shield: <%= setAttribute.atsh %></h4>
+      <h4 style="background-color: rgba(212, 16, 16, 0.5);">Health: <%= setAttribute.athp %></h4>
+      <h4 style="background-color: rgba(240, 240, 240, 0.5);">AP: <%= setAttribute.atap %></h4>
     </div>
   </div>
 
