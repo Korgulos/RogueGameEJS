@@ -1,10 +1,14 @@
 //variabile and constant
 
 let attacker = {
-  health: 270,
-  shielding: 270,
-  damage: 15,
-  actionPoints: 12,
+  health: 1000,
+  shielding: 1000,
+  damage: 25,
+  actionPoints: 14,
+  attack(){
+    
+  return this.damage*this.actionPoints;
+},
 };
 
 
