@@ -79,6 +79,14 @@ router.get("/weaponsMaster", async (req, res) => {
     res.redirect("main");
 });
 
+router.get("/character", async (req, res) => {
+  const setAttribute = await queryAbilities();
+  roguecaracter = await queryRogueCharacter();
+  roguecaracter.athletics
+
+  res.render("character", { roguecaracter: roguecaracter });
+});
+
 /////////// Functions for routes /////////////////
 
 function marksmanAttack(setAttribute) {
@@ -117,21 +125,22 @@ function apCounter(setAttribute) {
     setAttribute.ap -= 1;
   } else {
     setAttribute.ap = roguecaracter.rogueAp();
-    if (setAttribute.sh == 0 && setAttribute.hp - attacker.attack() >= 0) {
-      setAttribute.hp = setAttribute.hp - attacker.attack();
-    } else if (setAttribute.sh == 0) {
-      setAttribute.hp = 0;
-    }
     if (setAttribute.sh - attacker.attack() >= 0) {
       setAttribute.sh = setAttribute.sh - attacker.attack();
     } else {
       setAttribute.sh = 0;
     }
+    if (setAttribute.sh == 0 && setAttribute.hp - attacker.attack() >= 0) {
+      setAttribute.hp = setAttribute.hp - attacker.attack();
+    } else if (setAttribute.sh == 0) {
+      setAttribute.hp = 0;
+    }
   }
 }
 
 async function queryAbilities() {
-  const query = `SELECT ap,hp,sh,atap,athp,atsh,atdmg FROM rogue.abilitys where id = 1`;
+  const query = `SELECT ap,hp,sh,atap,athp,atsh,atdmg FROM rogue.abilitys 
+  where id = 1`;
   const [data] = await db.query(query);
   const ap = data[0].ap;
   const hp = data[0].hp;
@@ -144,7 +153,8 @@ async function queryAbilities() {
 }
 
 async function queryRogueCharacter() {
-  const query = `SELECT strength,constitution,dexterity,weaponsMaster,melee,marksman,athletics,defense FROM rogue.character where id_character = 1`;
+  const query = `SELECT strength,constitution,dexterity,weaponsMaster,melee,
+  marksman,athletics,defense FROM rogue.character where id_character = 1`;
   const [data] = await db.query(query);
   const rg = data[0];
   return new Rogue(
@@ -158,5 +168,6 @@ async function queryRogueCharacter() {
     rg.defense
   );
 }
+
 
 module.exports = router;

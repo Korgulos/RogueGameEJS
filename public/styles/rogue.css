@@ -45,7 +45,7 @@ ul {
 }
 
 h4 {
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   background-color: rgba(88, 163, 207, 0.5);
   margin-top: 30px;
@@ -138,4 +138,58 @@ body {
 }
 .btn:hover {
   background-color: #272727;
+}
+
+.abillitys{
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(107, 112, 116);
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 21%;
+  float: left;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+  margin: 2%;
+  padding: 0.5rem 1.5rem;
+  border-color: rgb(88, 163, 207);
+}
+#grid2 {
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.wraper{
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: space-around;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 25px;
+  border-color: rgb(88, 163, 207);
+  background: linear-gradient(180deg, rgb(6, 14, 19), rgb(22, 45, 61));
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 7px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: rgb(1, 16, 24);
+  background-color: rgba(88, 163, 207, 1);
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 9px rgb(22, 45, 61);
+}
+
+.btn2:hover {background-color: rgba(88, 163, 207, 1)}
+
+.btn2:active {
+  background-color: rgba(88, 163, 207, 1);
+  box-shadow: 0 5px rgb(22, 45, 61);
+  transform: translateY(4px);
 }
